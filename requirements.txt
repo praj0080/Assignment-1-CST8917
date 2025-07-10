@@ -1,0 +1,5 @@
+azure-functions
+azure-functions-durable
+Pillow
+pyodbc
+azure-storage-blob
