@@ -26,6 +26,7 @@ StrongP@ssword123!
 -->
 
 
+
 # CST8917 Assignment 1: Durable Workflow for Image Metadata Processing
 
 ## Summary
@@ -78,8 +79,6 @@ Use `local.settings.json` with your Azure Storage and SQL connection strings con
   az sql server firewall-rule create --resource-group cst8917-rg --server cst8917sql134 --name AllowAzureIPs --start-ip-address 0.0.0.0 --end-ip-address 0.0.0.0
   ```
 
-**Note:** I checked the checkbox **"Allow Azure services and resources to access this server"** in the Azure SQL Server firewall settings so the deployed function can successfully write to the database.
-
 ## How to Use
 
 1. Upload images (`.jpg`, `.png`, `.gif`) to the `images-input` container.
@@ -90,3 +89,4 @@ Use `local.settings.json` with your Azure Storage and SQL connection strings con
 
 ---
 
+**Note:** I checked the checkbox **"Allow Azure services and resources to access this server"** in the Azure SQL Server firewall settings so the deployed function can successfully write to the database.
