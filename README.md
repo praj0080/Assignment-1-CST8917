@@ -81,13 +81,12 @@ Use `local.settings.json` with your Azure Storage and SQL connection strings con
 
 **Note:** I checked the checkbox **✅ Allow Azure services and resources to access this server** in the Azure SQL Server firewall settings so the deployed function can successfully write to the database.
 
-## How to Use
+## How It Works
 
 1. Upload images (`.jpg`, `.png`, `.gif`) to the `images-input` container.
 2. The Durable Function pipeline will automatically trigger.
 3. Metadata will be extracted and saved to the Azure SQL Database table `ImageMetadata`.
 4. Verify data in the database.
-5. Record a demo video (max 5 minutes) showing the process.
 
 ---
 
