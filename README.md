@@ -91,4 +91,4 @@ Use `local.settings.json` with your Azure Storage and SQL connection strings con
 
 ---
 
-🎥 **Watch Demo Video:** [Click here to watch the demo](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+🎥 **Watch Demo Video:** [Click here](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
