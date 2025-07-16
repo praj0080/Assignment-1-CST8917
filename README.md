@@ -41,7 +41,7 @@ This project implements a **serverless image metadata processing pipeline** usin
 
 ## Source Code
 
-See `function_app.py` in the repo for full source code with documentation.
+See [`function_app.py`](https://github.com/degu0055/25S_CST8917_Assignment_1/blob/main/function_app.py) in the repo for full source code with documentation.
 
 ## Local Settings
 
@@ -79,6 +79,8 @@ Use `local.settings.json` with your Azure Storage and SQL connection strings con
   az sql server firewall-rule create --resource-group cst8917-rg --server cst8917sql134 --name AllowAzureIPs --start-ip-address 0.0.0.0 --end-ip-address 0.0.0.0
   ```
 
+**Note:** I checked the checkbox **"Allow Azure services and resources to access this server"** in the Azure SQL Server firewall settings so the deployed function can successfully write to the database. 
+
 ## How to Use
 
 1. Upload images (`.jpg`, `.png`, `.gif`) to the `images-input` container.
@@ -89,4 +91,4 @@ Use `local.settings.json` with your Azure Storage and SQL connection strings con
 
 ---
 
-**Note:** I checked the checkbox **"Allow Azure services and resources to access this server"** in the Azure SQL Server firewall settings so the deployed function can successfully write to the database.
+
