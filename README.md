@@ -25,6 +25,7 @@ StrongP@ssword123!
 
 -->
 
+
 # CST8917 Assignment 1: Durable Workflow for Image Metadata Processing
 
 ## Summary
@@ -85,4 +86,7 @@ Use `local.settings.json` with your Azure Storage and SQL connection strings con
 4. Verify data in the database.
 5. Record a demo video (max 5 minutes) showing the process.
 
+---
+
+**Note:** I checked the checkbox **"Allow Azure services and resources to access this server"** in the Azure SQL Server firewall settings so the deployed function can successfully write to the database.
 
