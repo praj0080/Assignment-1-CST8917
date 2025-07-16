@@ -85,12 +85,4 @@ Use `local.settings.json` with your Azure Storage and SQL connection strings con
 4. Verify data in the database.
 5. Record a demo video (max 5 minutes) showing the process.
 
-## Submission
 
-- Push all source code with this README to your GitHub repo.
-- Add the YouTube demo link in this README file.
-- Submit the GitHub repo URL via Brightspace.
-
----
-
-If you want help with anything else, just ask!
