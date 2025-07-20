@@ -1,0 +1,8 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=cst8917storage123;AccountKey=EAbAqRqn5r46430WkuflToWyYLeKmEP0koLBE8w+iF+wLrZTe0AnxeeDiQe1jd6pJ2LYkLyEb4xg+AStwpuSUw==;EndpointSuffix=core.windows.net",
+    "SQL_CONNECTION_STRING": "Server=tcp:cst8917sql134.database.windows.net,1433;Initial Catalog=cst8917db;Persist Security Info=False;User ID=sqladminuser;Password=StrongP@ssword123!;MultipleActiveResultSets=False;Encrypt=true;TrustServerCertificate=False;Connection Timeout=30;"
+  }
+}
