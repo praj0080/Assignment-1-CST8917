@@ -126,7 +126,7 @@ func azure functionapp publish image-metadata-func
 
 ## 🎥 YouTube Demo
 
-🔗 [Watch the Demo Video](https://youtu.be/your-demo-link-here)
+🔗 [Watch the Demo Video]([https://youtu.be/your-demo-link-here](https://drive.google.com/file/d/10wqpNisu1VRPS9NqohFcm38XbgWcBCy0/view?usp=sharing))
 
 ---
 
