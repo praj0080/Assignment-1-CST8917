@@ -9,13 +9,13 @@ from PIL import Image
 import io
 import pymssql
 
-# Durable Function app instance
+# Initialize the Durable Functions app with anonymous HTTP access
 my_app = df.DFApp(http_auth_level=func.AuthLevel.ANONYMOUS)
 
-# Blob Storage client setup
+# Initialize the BlobServiceClient using the storage connection string from environment variables
 blob_service_client = BlobServiceClient.from_connection_string(os.environ.get("AzureWebJobsStorage"))
 
-# Blob trigger with corrected path pattern
+# Blob Trigger Function - triggers when a new blob is added to the 'images-input' container
 @my_app.blob_trigger(arg_name="myblob", path="images-input/{name}", connection="AzureWebJobsStorage")
 @my_app.durable_client_input(client_name="client")
 async def blob_trigger(myblob: func.InputStream, client):
@@ -23,7 +23,7 @@ async def blob_trigger(myblob: func.InputStream, client):
     blobName = myblob.name.split("/")[-1]
     await client.start_new("orchestrator", client_input=blobName)
 
-# Orchestration function
+# Orchestrator Function - manages the workflow: extract metadata -> store metadata
 @my_app.orchestration_trigger(context_name="context")
 def orchestrator(context: df.DurableOrchestrationContext):
     blobName = context.get_input()
@@ -35,7 +35,7 @@ def orchestrator(context: df.DurableOrchestrationContext):
 
     return f"Metadata processed and stored for {blobName}"
 
-# Activity function to extract metadata from image
+# Activity Function - Stores the extracted metadata in an Azure SQL Database
 @my_app.activity_trigger(input_name='blobName')
 def extract_metadata(blobName):
     logging.info(f"Extracting metadata for {blobName}")
